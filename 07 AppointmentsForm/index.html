@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/site.css">
+</head>
+<body>
+  <!-- Add nav bar to this example -->
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>my App <small>Patients appointments</small></h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <!-- Body -->
+    <div class="row">
+      <!-- SearchPanel -->
+      <div class="col-md-4 well">
+        <span class="glyphicon glyphicon-search"></span>&nbsp;Appointments Filter
+        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+        <div class="row">
+          <form role="form">
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="entryDate">Appointment Date:</label>
+                <input type="text" class="form-control" id="entryDate"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="select" class="form-control" id="status"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="nstudy">Id:</label>
+                <input type="text" class="form-control" id="nstudy"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="extref">Center ID:</label>
+                <input type="text" class="form-control" id="extref"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="center">City:</label>
+                <input type="text" class="form-control" id="center"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="services">Area:</label>
+                <input type="text" class="form-control" id="services"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="doctor">Specialty:</label>
+                <input type="text" class="form-control" id="doctor"/>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary pull-right">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- #SearchPanel -->
+
+      <div class="col-md-8">
+         <!-- http://getbootstrap.com/javascript/#tabs -->
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#closedstudies" role="tab" data-toggle="tab">Confirmed appointments</a></li>
+            <li><a href="#pendingstudies" role="tab" data-toggle="tab">Wait list</a></li>
+         </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="closedstudies">
+            <table class="table table-hover">
+              <tr>
+                <th>Patient</th>
+                <th>Specialty area</th>
+                <th>Appointment</th>
+              </tr>
+
+              <tr>
+                <td>John doe</td>
+                <td>Family Doctor</td>
+                <td>12/06/2016 - 09:30</td>
+              </tr>
+
+              <tr>
+                <td>Tim Somez</td>
+                <td>Family Doctor</td>
+                <td>12/06/2016 - 09:45</td>
+              </tr>
+
+              <tr>
+                <td>Mary Smith</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 10:15</td>
+              </tr>
+
+              <tr>
+                <td>Peter Gram</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 10:45</td>
+              </tr>
+
+              <tr>
+                <td>Miriam Stweard</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:00</td>
+              </tr>
+
+              <tr>
+                <td>Jon Makeba</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:15</td>
+              </tr>
+
+              <tr>
+                <td>Richard Costall</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:30</td>
+              </tr>
+
+              <tr>
+                <td>Steven Fry</td>
+                <td>Pulmonologist</td>
+                <td>12/06/2016 - 11:45</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="tab-pane" id="pendingstudies">Pending</div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- #Body -->
+
+  </div>
+
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-primary footer">
+        <img src="assets/images/logo.png"/>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor, diam ultrices condimentum eleifend, urna ligula consectetur elit, non consequat est quam in est.</span>
+      <div>
+    </div>
+  </footer>
+</body>
+</html>

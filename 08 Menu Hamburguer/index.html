@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/css/site.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="container-fluid">
+    <div class="row navbar navbar-default">
+        <div class="navbar-header">
+          <button class="btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <div id="logo">
+            <a href='.'>
+				      <h1>my App <small>Patients appointments</small></h1>
+            </a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav active">
+              <a href="#"><span class="glyphicon glyphicon-file"></span><span class="hidden-sm">&nbsp;Stats</span></a>
+            </li>
+            <li class="nav">
+              <a href="#"><span class="glyphicon glyphicon-th-large"></span><span class="hidden-sm">&nbsp;Appointments</span></a>
+            </li>
+            <li class="nav">
+              <a href="#"><span class="glyphicon glyphicon-user"></span><span class="hidden-sm">&nbsp;Appointment</span></a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <!-- Body -->
+    <div class="row">
+      <!-- SearchPanel -->
+      <div class="col-md-4 well">
+        <span class="glyphicon glyphicon-search"></span>&nbsp;Appointments Filter
+        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+        <div class="row">
+          <form role="form">
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="entryDate">Appointment Date:</label>
+                <input type="text" class="form-control" id="entryDate"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="select" class="form-control" id="status"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="nstudy">Id:</label>
+                <input type="text" class="form-control" id="nstudy"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="extref">Center ID:</label>
+                <input type="text" class="form-control" id="extref"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="center">City:</label>
+                <input type="text" class="form-control" id="center"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="services">Area:</label>
+                <input type="text" class="form-control" id="services"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="doctor">Specialty:</label>
+                <input type="text" class="form-control" id="doctor"/>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary pull-right">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- #SearchPanel -->
+
+      <div class="col-md-8">
+         <!-- http://getbootstrap.com/javascript/#tabs -->
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#closedstudies" role="tab" data-toggle="tab">Confirmed appointments</a></li>
+            <li><a href="#pendingstudies" role="tab" data-toggle="tab">Wait list</a></li>
+         </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="closedstudies">
+            <table class="table table-hover">
+              <tr>
+                <th>Patient</th>
+                <th>Specialty area</th>
+                <th>Appointment</th>
+              </tr>
+
+              <tr>
+                <td>John doe</td>
+                <td>Family Doctor</td>
+                <td>12/06/2016 - 09:30</td>
+              </tr>
+
+              <tr>
+                <td>Tim Somez</td>
+                <td>Family Doctor</td>
+                <td>12/06/2016 - 09:45</td>
+              </tr>
+
+              <tr>
+                <td>Mary Smith</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 10:15</td>
+              </tr>
+
+              <tr>
+                <td>Peter Gram</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 10:45</td>
+              </tr>
+
+              <tr>
+                <td>Miriam Stweard</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:00</td>
+              </tr>
+
+              <tr>
+                <td>Jon Makeba</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:15</td>
+              </tr>
+
+              <tr>
+                <td>Richard Costall</td>
+                <td>Pediatrician</td>
+                <td>12/06/2016 - 11:30</td>
+              </tr>
+
+              <tr>
+                <td>Steven Fry</td>
+                <td>Pulmonologist</td>
+                <td>12/06/2016 - 11:45</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="tab-pane" id="pendingstudies">Pending</div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- #Body -->
+
+  </div>
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-primary footer">
+        <img src="assets/images/logo.png"/>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor, diam ultrices condimentum eleifend, urna ligula consectetur elit, non consequat est quam in est.</span>
+      <div>
+    </div>
+  </footer>
+</body>
+</html>
